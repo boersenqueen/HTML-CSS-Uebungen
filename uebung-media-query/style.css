@@ -26,11 +26,44 @@ body {
   display: block;
 }
 
-.card h1 {
+.card h2 {
   background: #fff;
   padding: 5px;
+  /*Schriftgröße wächst mit dem Bildschirm mit*/
+  font-size: 2vw;
 }
 
 .row {
   display: block;
+}
+
+/*zwischen Bildschirmbreite von 768px und 1139px soll der Body gelb sein 
+@media (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }*/
+
+/*Hintergrundfarbe rot bei großem Bildschirm
+Schriftgröße von h1 soll 2.5rem sein */
+
+
+@media (min-width: 1140px) {
+  body {
+    background-color: red;
+  }
+  h1 {font-size: 2.5rem;}
+  /*Bilder nebeneinander anordnen bei Breite über 1140px*/
+
+  .row {
+    display: flex;
+  }
+}
+
+/*zwischen Bildschirmbreite von 768px und 1139px soll der Body gelb sein
+Schriftgröße von h1 soll 2.5rem sein */
+@media (min-width: 768px) and (max-width: 1139px) {
+  body {
+    background-color: yellow;
+  }
+  h1 {font-size: 2rem;}
 }
